@@ -1,3 +1,5 @@
+// Estructuras
+
 pub fn add_block(grid: &mut Vec<Vec<bool>>, x: usize, y: usize) {
     grid[y][x] = true;
     grid[y][x + 1] = true;

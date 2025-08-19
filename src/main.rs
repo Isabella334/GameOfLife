@@ -29,15 +29,71 @@ fn main() {
     let region_x = 40; 
     let region_y = 40;
 
-    add_glider(&mut game.grid,  region_x + 2,  region_y + 2);
-    add_lwss(&mut game.grid,    region_x + 5, region_y + 25);
-    add_blinker(&mut game.grid, region_x + 10,  region_y + 10);
-    add_toad(&mut game.grid,    region_x + 15, region_y + 10);
-    add_beacon(&mut game.grid,  region_x + 8,  region_y + 20);
-    add_beehive(&mut game.grid, region_x + 20, region_y + 15);
-    add_loaf(&mut game.grid,    region_x + 25, region_y + 20);
-    add_boat(&mut game.grid,    region_x + 20, region_y + 25);
-    add_tub(&mut game.grid,     region_x + 25, region_y + 20);
+    add_block(&mut game.grid,  region_x+3,  region_y+9);
+    add_block(&mut game.grid,  region_x-3,  region_y+9);
+    add_block(&mut game.grid,  region_x+9,  region_y+3);
+    add_block(&mut game.grid,  region_x-9,  region_y+3);
+    add_block(&mut game.grid,  region_x+9,  region_y-3);
+    add_block(&mut game.grid,  region_x-9,  region_y-3);
+    add_block(&mut game.grid,  region_x+3,  region_y-9);
+    add_block(&mut game.grid,  region_x-3,  region_y-9);
+
+    add_beehive(&mut game.grid,  region_x-9,  region_y+18);
+    add_beehive(&mut game.grid,  region_x-18,  region_y-9);
+    add_beehive(&mut game.grid,  region_x+18,  region_y+9);
+    add_beehive(&mut game.grid,  region_x+9,  region_y-18);
+
+    add_loaf(&mut game.grid,  region_x+9,  region_y+18);
+    add_loaf(&mut game.grid,  region_x-18,  region_y+9);
+    add_loaf(&mut game.grid,  region_x+18,  region_y-9);
+    add_loaf(&mut game.grid,  region_x-9,  region_y-18);
+
+    add_boat(&mut game.grid,  region_x-9,  region_y+21);
+    add_boat(&mut game.grid,  region_x+21,  region_y+9);
+    add_boat(&mut game.grid,  region_x+9,  region_y-21);
+    add_boat(&mut game.grid,  region_x-21,  region_y-9);
+
+    add_tub(&mut game.grid,  region_x+9,  region_y+21);
+    add_tub(&mut game.grid,  region_x-21,  region_y+9);
+    add_tub(&mut game.grid,  region_x+21,  region_y-9);
+    add_tub(&mut game.grid,  region_x-9,  region_y-21);
+
+    add_blinker(&mut game.grid,  region_x+3,  region_y+6);
+    add_blinker(&mut game.grid,  region_x-3,  region_y+6);
+    add_blinker(&mut game.grid,  region_x+9,  region_y+6);
+    add_blinker(&mut game.grid,  region_x-9,  region_y+6);
+    add_blinker(&mut game.grid,  region_x+3,  region_y-6);
+    add_blinker(&mut game.grid,  region_x-3,  region_y-6);
+    add_blinker(&mut game.grid,  region_x+9,  region_y-6);
+    add_blinker(&mut game.grid,  region_x-9,  region_y-6);
+
+    add_toad(&mut game.grid,  region_x+6,  region_y+9);
+    add_toad(&mut game.grid,  region_x-6,  region_y+9);
+    add_toad(&mut game.grid,  region_x+6,  region_y+3);
+    add_toad(&mut game.grid,  region_x-6,  region_y+3);
+    add_toad(&mut game.grid,  region_x+6,  region_y-9);
+    add_toad(&mut game.grid,  region_x-6,  region_y-9);
+    add_toad(&mut game.grid,  region_x+6,  region_y-3);
+    add_toad(&mut game.grid,  region_x-6,  region_y-3);
+
+    add_beacon(&mut game.grid,  region_x+9,  region_y+15);
+    add_beacon(&mut game.grid,  region_x-9,  region_y+15);
+    add_beacon(&mut game.grid,  region_x+15,  region_y+9);
+    add_beacon(&mut game.grid,  region_x-15,  region_y+9);
+    add_beacon(&mut game.grid,  region_x+9,  region_y-15);
+    add_beacon(&mut game.grid,  region_x-9,  region_y-15);
+    add_beacon(&mut game.grid,  region_x+15,  region_y-9);
+    add_beacon(&mut game.grid,  region_x-15,  region_y-9);
+
+    add_glider(&mut game.grid,  region_x+6,  region_y+15);
+    add_glider(&mut game.grid,  region_x-15,  region_y+6);
+    add_glider(&mut game.grid,  region_x+15,  region_y-6);
+    add_glider(&mut game.grid,  region_x-6,  region_y-15);
+
+    add_lwss(&mut game.grid,  region_x-6,  region_y+15);
+    add_lwss(&mut game.grid,  region_x+15,  region_y+6);
+    add_lwss(&mut game.grid,  region_x+6,  region_y-15);
+    add_lwss(&mut game.grid,  region_x-15,  region_y-6);
 
 
     while !window.window_should_close() {
